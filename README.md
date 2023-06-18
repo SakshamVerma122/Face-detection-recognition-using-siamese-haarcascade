@@ -1,6 +1,5 @@
 ### Surveillance System with face detection and face recognition
 
-
 **Abstract** 
 
 The rise in crime and security breaches has led to an increasing demand for effective surveillance systems.  
@@ -28,60 +27,55 @@ This documentation is about Surveillance System with face detection and face rec
 It uses 2 algorithms to implement 
 
 - **For Face Recognition**  
-- We have used Siamese Neural Networks 
-- Siamese neural networks are a type of neural network architecture that can be used for face detection and other similarity-based tasks. In the context of face detection, a Siamese neural network is typically trained on pairs of images to learn a similarity metric that can be used to determine whether two images contain the same person's face or not. 
-- The Siamese architecture consists of two identical sub-networks, which are trained on pairs of images and produce feature vectors that represent each image. The two feature vectors are then compared using a distance metric, such as Euclidean distance or cosine similarity, to determine the similarity between the two images. 
-- In the case of face detection, a Siamese network can be trained on pairs of images, with one image containing a known face and the other containing an unknown face. The network learns to produce feature vectors that are similar for images containing the same face and dissimilar for images containing different faces. This can be used to 
-
+    - We have used Siamese Neural Networks 
+        - Siamese neural networks are a type of neural network architecture that can be used for face detection and other similarity-based tasks. In the context of face detection, a Siamese neural network is typically trained on pairs of images to learn a similarity metric that can be used to determine whether two images contain the same person's face or not. 
+        - The Siamese architecture consists of two identical sub-networks, which are trained on pairs of images and produce feature vectors that represent each image. The two feature vectors are then compared using a distance metric, such as Euclidean distance or cosine similarity, to determine the similarity between the two images. 
+        - In the case of face detection, a Siamese network can be trained on pairs of images, with one image containing a known face and the other containing an unknown face. The network learns to produce feature vectors that are similar for images containing the same face and dissimilar for images containing different faces. This can be used to 
 create a face recognition system that can identify a person from a database of known faces. 
-
-- Siamese networks have been shown to be effective for face detection and face recognition tasks, particularly when dealing with small datasets or situations where there is significant variation in lighting, pose, or other factors. However, they can be computationally expensive to train and may require significant resources, such as GPUs, to achieve good performance. 
-- We must pass the two images parallelly through two Siamese Neural Networks  
-- And then subtract the 2 embeddings (L1Dist) 
-- Pass the resultant to a binary classification algorithm 
-- We have used Adam’s optimiser here as optimiser. 
-- We have used Binary Cross entropy as loss function 
+        - Siamese networks have been shown to be effective for face detection and face recognition tasks, particularly when dealing with small datasets or situations where there is significant variation in lighting, pose, or other factors. However, they can be computationally expensive to train and may require significant resources, such as GPUs, to achieve good performance. 
+        - We must pass the two images parallelly through two Siamese Neural Networks  
+        - And then subtract the 2 embeddings (L1Dist) 
+        - Pass the resultant to a binary classification algorithm 
+        - We have used Adam’s optimiser here as optimiser. 
+        - We have used Binary Cross entropy as loss function 
 - **For Face detection**  
-- We have used haarcascade\_frontalface\_default.xml .
+        - We have used haarcascade\_frontalface\_default.xml .
 2. **SOFTWARE AND HARDWARE REQUIRMENTS:** 
-1. **Training and saving the model: Kaggle**  
-1. We could have done both the things in colab but kaggle gives a better gpu than colab in its free version too. 
-1. We used Kaggle GPU P100 
-1. Kaggle is a popular online platform that provides a variety of resources for training neural networks and other machine learning models. Some of the key resources that Kaggle provides for training NNs include: 
-1. Datasets: Kaggle hosts a large collection of datasets that can be used to train neural networks. These datasets cover a wide range of topics, from image recognition and natural language processing to time series analysis and recommendation systems. 
-1. Kernels: Kaggle provides an online code editor called Kernels, which allows users to write, execute, and share Python code in a web browser. Kernels are pre-configured with popular machine learning libraries like TensorFlow, PyTorch, and scikit-learn, making it easy to start training NNs right away. 
-2. **IDE - jupyter notebook(Google colab):** 
-1. We have to use google colab as it provides free gpu to run and our gpu and memory requirements are pretty high to run the model. 
-1. Google Colab, short for Google Colaboratory, is a cloud-based platform for working with Jupyter notebooks that allows users to write and run Python code in a web browser without any setup or installation. It is a free service provided by Google that offers a variety of powerful computing resources, including high-performance GPUs, to enable machine learning and data analysis tasks. 
-1. Google Colab offers a range of useful features, including support for popular data science libraries like TensorFlow, Keras, PyTorch, and OpenCV. Additionally, Colab provides a collaborative environment where users can share and collaborate on their notebooks with others. This makes it a great tool for data scientists, researchers, and students who need to work with data and code in a collaborative and convenient way. 
+    1. **Training and saving the model: Kaggle**  
+        1. We could have done both the things in colab but kaggle gives a better gpu than colab in its free version too. 
+        1. We used Kaggle GPU P100 
+        1. Kaggle is a popular online platform that provides a variety of resources for training neural networks and other machine learning models. Some of the key resources that Kaggle provides for training NNs include: 
+            1. Datasets: Kaggle hosts a large collection of datasets that can be used to train neural networks. These datasets cover a wide range of topics, from image recognition and natural language processing to time series analysis and recommendation systems. 
+            1. Kernels: Kaggle provides an online code editor called Kernels, which allows users to write, execute, and share Python code in a web browser. Kernels are pre-configured with popular machine learning libraries like TensorFlow, PyTorch, and scikit-learn, making it easy to start training NNs right away. 
+    2. **IDE - jupyter notebook(Google colab):** 
+        1. We have to use google colab as it provides free gpu to run and our gpu and memory requirements are pretty high to run the model. 
+        1. Google Colab, short for Google Colaboratory, is a cloud-based platform for working with Jupyter notebooks that allows users to write and run Python code in a web browser without any setup or installation. It is a free service provided by Google that offers a variety of powerful computing resources, including high-performance GPUs, to enable machine learning and data analysis tasks. 
+        1. Google Colab offers a range of useful features, including support for popular data science libraries like TensorFlow, Keras, PyTorch, and OpenCV. Additionally, Colab provides a collaborative environment where users can share and collaborate on their notebooks with others. This makes it a great tool for data scientists, researchers, and students who need to work with data and code in a collaborative and convenient way. 
 
-**Hardware requirements** 
+2. **Hardware requirements** 
 
 - **GPU** 
-- GPU P 100 Kaggle 
-- The Kaggle GPU P100 is a type of GPU accelerator offered by Kaggle for running machine learning and deep learning workloads. The P100 is a powerful GPU that can accelerate training of deep learning models, particularly those involving large amounts of data and computationally intensive operations, such as training convolutional neural networks (CNNs) on large image datasets. 
-- The P100 is based on the NVIDIA Pascal architecture and offers a high level of performance, with 3584 CUDA cores, 16 GB of high-bandwidth memory (HBM2), and a memory bandwidth of up to 732 GB/s. This makes it suitable for a wide range of machine learning tasks, including image recognition, natural language processing, and reinforcement learning. 
-- Kaggle provides the P100 as a cloud-based service, which means you can access it from anywhere with an internet connection. This makes it easy to spin up a P100 instance for your machine learning tasks without needing to purchase expensive hardware. However, it's important to note that using the P100 can be expensive, so it's important to optimize your code and minimize unnecessary computations to make the most efficient use of the available resources. 
+    - GPU P 100 Kaggle 
+        - The Kaggle GPU P100 is a type of GPU accelerator offered by Kaggle for running machine learning and deep learning workloads. The P100 is a powerful GPU that can accelerate training of deep learning models, particularly those involving large amounts of data and computationally intensive operations, such as training convolutional neural networks (CNNs) on large image datasets. 
+        - The P100 is based on the NVIDIA Pascal architecture and offers a high level of performance, with 3584 CUDA cores, 16 GB of high-bandwidth memory (HBM2), and a memory bandwidth of up to 732 GB/s. This makes it suitable for a wide range of machine learning tasks, including image recognition, natural language processing, and reinforcement learning. 
+        - Kaggle provides the P100 as a cloud-based service, which means you can access it from anywhere with an internet connection. This makes it easy to spin up a P100 instance for your machine learning tasks without needing to purchase expensive hardware. However, it's important to note that using the P100 can be expensive, so it's important to optimize your code and minimize unnecessary computations to make the most efficient use of the available resources. 
 - RAM  
-- 16GB DDR4 is recommended 
-3. **EXISTING SYSTEM/APPROACH/METHOD** 
-1. **Face Detection models other than ours** 
-   1. **Single Shot Detector (SSD):** This is a neural network model that uses a single pass through the network to detect faces. The SSD model has shown good performance on face detection tasks, but may not be as accurate as some of the more complex models. 
-   1. **Region-based Convolutional Neural Network (R-CNN):** This is a neural network model that uses region proposal networks to identify potential face regions and then applies a CNN to each region to classify whether it contains a face or not. The R-CNN model is computationally expensive, but can achieve high accuracy on face detection tasks. 
-   1. **Faster R-CNN:** This is an improved version of the R-CNN model that uses a shared CNN to compute features for potential regions and then uses region proposal networks to select the most promising regions for further classification. The Faster R-CNN model is faster and more accurate than the original R-CNN model. 
-   1. **RetinaNet:** This is a neural network model that uses a novel focal loss function to address the issue of class imbalance in object detection tasks. The RetinaNet model has shown good performance on face detection tasks, particularly in cases where there is significant variation in scale or pose. 
-1. **Face recognition models other than ours** 
-1. **Triplet Loss Networks:** This is another type of neural network architecture that can be used for similarity-based tasks, including face recognition. Triplet loss networks are trained on triplets of images, with two images containing the same person's face and one image containing a different person's face. 
+   - 16GB DDR4 is recommended 
+4. **EXISTING SYSTEM/APPROACH/METHOD** 
+    1. **Face Detection models other than ours** 
+       1. **Single Shot Detector (SSD):** This is a neural network model that uses a single pass through the network to detect faces. The SSD model has shown good performance on face detection tasks, but may not be as accurate as some of the more complex models. 
+       1. **Region-based Convolutional Neural Network (R-CNN):** This is a neural network model that uses region proposal networks to identify potential face regions and then applies a CNN to each region to classify whether it contains a face or not. The R-CNN model is computationally expensive, but can achieve high accuracy on face detection tasks. 
+       1. **Faster R-CNN:** This is an improved version of the R-CNN model that uses a shared CNN to compute features for potential regions and then uses region proposal networks to select the most promising regions for further classification. The Faster R-CNN model is faster and more accurate than the original R-CNN model. 
+       1. **RetinaNet:** This is a neural network model that uses a novel focal loss function to address the issue of class imbalance in object detection tasks. The RetinaNet model has shown good performance on face detection tasks, particularly in cases where there is significant variation in scale or pose. 
+   1. **Face recognition models other than ours** 
+      1. **Triplet Loss Networks:** This is another type of neural network architecture that can be used for similarity-based tasks, including face recognition. Triplet loss networks are trained on triplets of images, with two images containing the same person's face and one image containing a different person's face. The network is trained to produce feature vectors that are similar for the two images of the same person and dissimilar for the image of the different person. 
+      1. **DeepFace:** This is a neural network model developed by Facebook that uses a 3D model to warp faces into a canonical pose and then applies a CNN to the warped image to extract features. The DeepFace model has achieved high accuracy on face recognition tasks and is particularly effective at handling variations in pose and lighting. 
+      1. **FaceNet:** This is a neural network model developed by Google that uses a CNN to directly map face images to a high-dimensional embedding space, where faces of the same person are close together and faces of different people are far apart. The FaceNet model has achieved state-of-the-art performance on a wide range of face recognition tasks. 
+      1. **VGGFace:** This is a neural network model that uses a CNN to extract features from face images and then applies a fully connected layer to classify the face images into identities. The VGGFace model has achieved high accuracy on face recognition tasks and is particularly effective at handling variations in expression and occlusion. 
 
-The network is trained to produce feature vectors that are similar for the two images of the same person and dissimilar for the image of the different person. 
+      **Why we chose Haar cascaded?** 
 
-2. **DeepFace:** This is a neural network model developed by Facebook that uses a 3D model to warp faces into a canonical pose and then applies a CNN to the warped image to extract features. The DeepFace model has achieved high accuracy on face recognition tasks and is particularly effective at handling variations in pose and lighting. 
-2. **FaceNet:** This is a neural network model developed by Google that uses a CNN to directly map face images to a high-dimensional embedding space, where faces of the same person are close together and faces of different people are far apart. The FaceNet model has achieved state-of-the-art performance on a wide range of face recognition tasks. 
-2. **VGGFace:** This is a neural network model that uses a CNN to extract features from face images and then applies a fully connected layer to classify the face images into identities. The VGGFace model has achieved high accuracy on face recognition tasks and is particularly effective at handling variations in expression and occlusion. 
-
-**Why we chose Haar cascaded?** 
-
-- In terms of computational requirements, the Haar Cascades model is generally the least computationally intensive, followed by the Single Shot Detector (SSD) model. 
+          - In terms of computational requirements, the Haar Cascades model is generally the least computationally intensive, followed by the Single Shot Detector (SSD) model. 
 - The Region-based Convolutional Neural Network (R-CNN) and Faster R- CNN models are more computationally expensive, as they require a region proposal step that can be time-consuming. These models also require significant amounts of memory, which can be a limiting factor on some hardware platforms. 
 - The RetinaNet model is also computationally expensive, but has been shown to be more efficient than other state-of-the-art models, such as the Faster R-CNN model, due to its use of a novel focal loss function. 
 
