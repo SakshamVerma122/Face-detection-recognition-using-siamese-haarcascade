@@ -1,20 +1,5 @@
-**Surveillance System with face detection and face recognition** 
+### Surveillance System with face detection and face recognition
 
-by 
-
-**SAKSHAM VERMA 19MID0023**
-
-Submitted to 
-
-Prof. Geraldine Bessie Amali, SCOPE 
-
-` `**School of Computer Science and Engineering**    
-
-![](Aspose.Words.450f599c-c908-413b-9abb-ba2589a5d7d5.001.png)
-
-S.NO  TOPIC  PAGE NO. ![](Aspose.Words.450f599c-c908-413b-9abb-ba2589a5d7d5.002.png)
-
-0  ABSTRACT  2 **1**  INTRODUCTION  2 **2**  HARDWARE / SOFTWARE REQUIREMENTS  3 **3**  EXISTING SYSTEM/APPROACH/METHOD  5 **4**  PROPOSED/DEVELOPED MODEL  6 **5**  RESULTS AND DISCUSSION  9 **6**  CONCLUSION  11 **7**  REFERENCES  12 **8**  APPENDIX: SAMPLE CODE  12 
 
 **Abstract** 
 
