@@ -1,6 +1,6 @@
 # Creating the README.md file content in multiple parts to avoid incomplete input error
 
-part1 = """
+
 # 📸 Surveillance System with Face Detection and Face Recognition
 ---
 
@@ -93,7 +93,7 @@ This documentation is about a Surveillance System with face detection and face r
 - Recognizes small differences between data samples.
 """
 
-part2 = """
+
 ---
 
 ## 4. Proposed/Developed Model
@@ -174,4 +174,4 @@ part2 = """
 - [Siamese Neural Networks for One-Shot Image Recognition](https://www.cs.cmu.edu/~rsalakhu/papers/oneshot1.pdf)
 - [TensorFlow](https://www.tensorflow.org/)
 - [Face Recognition with OpenCV](https://www.youtube.com/watch?v=YjWh7QvVH60)
-- [Object Detection using Haar Cascade](https://www.analyticsvidhya.com/blog/2022/04/object-detection-using-haar-cascade-opencv/#:~:text=What%20are%20Haar%20Cascades%3F,%2C%20buildings
+- [Object Detection using Haar Cascade](https://www.analyticsvidhya.com/blog/2022/04/object-detection-using-haar-cascade-opencv/#:~:text=What%20are%20Haar%20Cascades%3F,%2C%20buildings)
